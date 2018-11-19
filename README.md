@@ -5,7 +5,8 @@ A foundation website prepared according to the client's instructions.
 Used.:
 
 - HTML,
-- CSS + SASS,
+- CSS,
+- SASS,
 - JavaScript,
 - Semantic UI,
 - Animate CSS,
