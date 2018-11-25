@@ -17,15 +17,3 @@ burgerNavT.addEventListener('click',openMenuT);
 
 /*END MOBILE MENU*/
 
-/*START SLIDER*/
-$(document).ready(function(){
-    $('.slider').bxSlider({
-        mode: 'fade',
-        speed: 250,
-        responsive: true,
-        auto: true,
-        autoControls: true,
-
-    });
-});
-/*STOP SLIDER*/
