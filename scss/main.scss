@@ -7,7 +7,7 @@ body {
   .wrapper {
     display: grid;
     grid-template-columns: 15% 1fr 1fr 1fr 15%;
-    grid-template-areas: ". header header header ." ". main main main ." ". footer footer footer .";
+    grid-template-areas: ". header header header ." "main main main main main" ". footer footer footer .";
     header {
       grid-area: header;
       .header-desktop-menu{
@@ -56,9 +56,13 @@ body {
           font-family: aller;
           color: $color-blue;
           display: flex;
+          margin: 0;
+          padding: 0;
           h1{
             font-size: 2.5rem;
             display: block;
+            padding: 0;
+            margin: 0;
           }
           .burger-mobile-nav-menu {
               display: block;
@@ -76,6 +80,8 @@ body {
             overflow: hidden;
             height: 0;
             flex-direction: column;
+            margin: 0;
+            padding: 0;
             li {
               list-style: none;
               &:nth-child(2) {
@@ -112,13 +118,27 @@ body {
     }
     main {
       grid-area: main;
+      display: grid;
+      grid-template-columns: 15% 1fr 1fr 1fr 15%;
+      grid-template-areas:
+                          ". main-banner main-banner main-banner ."
+                          ". section section section ."
+                          ". main-cooperation main-cooperation main-cooperation .";
+      @media screen and (max-width: 780px){
+        grid-template-areas:
+                "main-banner main-banner main-banner main-banner main-banner"
+                ". section section section ."
+                "main-cooperation main-cooperation main-cooperation main-cooperation main-cooperation";
+      }
       .main-banner{
+        grid-area: main-banner;
         img{
           max-width: 100%;
           height: auto;
         }
       }
       section {
+        grid-area: section;
         .main-title {
           margin: 1%;
           h3 {
@@ -165,6 +185,7 @@ body {
         }
       }
       .main-cooperation {
+        grid-area: main-cooperation;
         background: $color-blue;
         width: 100%;
         height: auto;
@@ -175,6 +196,7 @@ body {
         @media screen and (max-width: 780px) {
           display: flex;
           flex-wrap: wrap;
+          justify-content: center;
         }
         p {
           color: $color-white;
@@ -191,7 +213,7 @@ body {
           align-self: center;
           text-align: center;
           @media screen and (max-width: 780px) {
-            margin-left: 0;
+            margin-left: 0%;
           }
           p {
             font-size: 1.2rem;

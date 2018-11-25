@@ -12,7 +12,7 @@ body {
 body .wrapper {
   display: grid;
   grid-template-columns: 15% 1fr 1fr 1fr 15%;
-  grid-template-areas: ". header header header ." ". main main main ." ". footer footer footer .";
+  grid-template-areas: ". header header header ." "main main main main main" ". footer footer footer .";
 }
 body .wrapper header {
   grid-area: header;
@@ -66,10 +66,14 @@ body .wrapper header .header-mobile-menu .header-mobile-logo {
   font-family: aller;
   color: #3870DF;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 body .wrapper header .header-mobile-menu .header-mobile-logo h1 {
   font-size: 2.5rem;
   display: block;
+  padding: 0;
+  margin: 0;
 }
 body .wrapper header .header-mobile-menu .header-mobile-logo .burger-mobile-nav-menu {
   display: block;
@@ -85,6 +89,8 @@ body .wrapper header .header-mobile-menu nav .header-mobile-nav-menu {
   overflow: hidden;
   height: 0;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 body .wrapper header .header-mobile-menu nav .header-mobile-nav-menu li {
   list-style: none;
@@ -118,10 +124,24 @@ body .wrapper header .header-mobile-menu nav .header-mobile-nav-menu li a img {
 }
 body .wrapper main {
   grid-area: main;
+  display: grid;
+  grid-template-columns: 15% 1fr 1fr 1fr 15%;
+  grid-template-areas: ". main-banner main-banner main-banner ." ". section section section ." ". main-cooperation main-cooperation main-cooperation .";
+}
+@media screen and (max-width: 780px) {
+  body .wrapper main {
+    grid-template-areas: "main-banner main-banner main-banner main-banner main-banner" ". section section section ." "main-cooperation main-cooperation main-cooperation main-cooperation main-cooperation";
+  }
+}
+body .wrapper main .main-banner {
+  grid-area: main-banner;
 }
 body .wrapper main .main-banner img {
   max-width: 100%;
   height: auto;
+}
+body .wrapper main section {
+  grid-area: section;
 }
 body .wrapper main section .main-title {
   margin: 1%;
@@ -171,6 +191,7 @@ body .wrapper main section .main-articles .articles-button {
   }
 }
 body .wrapper main .main-cooperation {
+  grid-area: main-cooperation;
   background: #3870DF;
   width: 100%;
   height: auto;
@@ -183,6 +204,7 @@ body .wrapper main .main-cooperation {
   body .wrapper main .main-cooperation {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 body .wrapper main .main-cooperation p {
@@ -204,7 +226,7 @@ body .wrapper main .main-cooperation .cooperation_right {
 }
 @media screen and (max-width: 780px) {
   body .wrapper main .main-cooperation .cooperation_right {
-    margin-left: 0;
+    margin-left: 0%;
   }
 }
 body .wrapper main .main-cooperation .cooperation_right p {
