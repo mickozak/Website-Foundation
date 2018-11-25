@@ -112,6 +112,12 @@ body {
     }
     main {
       grid-area: main;
+      .main-banner{
+        img{
+          max-width: 100%;
+          height: auto;
+        }
+      }
       section {
         .main-title {
           margin: 1%;
