@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style/normalize.css" type="text/css"/>
     <link rel="stylesheet" href="style/semantic.min.css" type="text/css"/>
     <link rel="stylesheet" href="style/animate.min.css" type="text/css"/>
+    <link rel="stylesheet" href="style/jquery.bxslider.min.css">
     <link rel="stylesheet" href="style/main.css" type="text/css"/>
 </head>
 <body>
@@ -17,57 +18,75 @@
 
     <!--START HEADER-->
     <header>
-        <div class="header-social">
-            <a class="" target="_blank" href="https://www.facebook.com/AktywnyStudentLublin/"><img src="img/fb.svg"/></a>
+        <div class="header-desktop-menu">
+            <h1>OFES</h1>
+            <nav>
+                <ul class="header-desktop-menu">
+                    <li><a href="#">o fundacji</a></li>
+                    <li><a href="#">projekty</a></li>
+                    <li><a href="#">współpraca</a></li>
+                    <li><a href="#">kontakt</a></li>
+                    <li><img src="img/fb.svg"/></li>
+                </ul>
+            </nav>
         </div>
-        <div class="header-logo">
-            <h1 class="large-screen">OFES - Ogólnopolska Fundacja Edukacyjno-Szkoleniowa</h1>
-            <h1 class="small-screen">OFES</h1>
-            <a class="burger-nav"></a>
+        <div class="header-mobile-menu">
+            <div class="header-mobile-logo">
+                <h1>OFES</h1>
+                <a class="burger-mobile-nav-menu"></a>
+            </div>
+            <nav>
+                <ul class="header-mobile-nav-menu">
+                    <li><a href="#">o fundacji</a></li>
+                    <li><a href="#">projekty</a></li>
+                    <li><a href="#">współpraca</a></li>
+                    <li><a href="#">kontakt</a></li>
+                    <li><a><img src="img/fb.svg"/></a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul class="header-menu">
-                <li><a href="#">o fundacji</a></li>
-                <li><a href="#">projekty</a></li>
-                <li><a href="#">współpraca</a></li>
-                <li><a href="#">kontakt</a></li>
-                <li><a><img src="img/fb.svg"/></a></li>
-            </ul>
-        </nav>
     </header>
     <!--END HEADER-->
 
     <!--START MAIN-->
     <main>
-        <div class="main-banner">
-            <img src="img/banner.jpg"/>
+        <div class="slider">
+            <div><img src="img/baner_one.png"></div>
+            <div><img src="img/banner_two.png"></div>
         </div>
         <section>
             <div class="main-title">
                 <h3>Aktualności</h3>
             </div>
             <div class="main-articles">
-                <article>
-                    <header>Trening efektywności osobistej - 31.05.2017</header>
-                    <p>Szkolenie poprowadzi Daniel Jan Kubach - polski biznesmen, multimilioner, inwestor, Anioł Biznesu, członek wielu prestiżowych organizacji, w tym Business Centre Club. Chcesz rozwijać się szybciej oraz zarabiać więcej - zwiększy swoją efektywność.</p>
+                <div class="articles-all">
+                    <article>
+                        <header>Trening efektywności osobistej - 31.05.2017</header>
+                        <p>Szkolenie poprowadzi Daniel Jan Kubach - polski biznesmen, multimilioner, inwestor, Anioł Biznesu, członek wielu prestiżowych organizacji, w tym Business Centre Club. Chcesz rozwijać się szybciej oraz zarabiać więcej - zwiększy swoją efektywność.</p>
+                        <a target="_blank" href="https://www.facebook.com/events/405018836543590/"><button class="ui button">WIĘCEJ INFORMACJI</button></a>
+                    </article>
+                    <article>
+                        <header>Własna firma - 20.04.2017</header>
+                        <p>Szkolenie zostanie przeprowadzone przez przedsiębiorce Kamila Mokickiego, który opowie o w wadach i zaletach prowadzenia własnej firmy. Ponadto zaprezentuje kilka wskazówek dla młodego biznesmena.  </p>
+                        <a target="_blank" href="https://www.facebook.com/events/1861692164104017/"><button class="ui button">WIĘCEJ INFORMACJI</button></a>
+                    </article>
+                    <article>
+                        <header>Co zrobić, by nas słuchano - 04.04.2017</header>
+                        <p>Na to pytanie odpowie Bartosz Liberski - Autor książki „Wystąpienia publiczne. Przemawiaj skutecznie i bez stresu!”, który od ponad 8 lat specjalizuje się w szkoleniach: biznesowych z wystąpień publicznych oraz odwlekania. </p>
+                        <a target="_blank" href="https://www.facebook.com/events/182291802262268/"><button class="ui button">WIĘCEJ INFORMACJI</button></a>
+                    </article>
+                </div>
+                <div class="articles-button">
                     <a target="_blank" href="https://www.facebook.com/events/405018836543590/"><button class="ui button">WIĘCEJ INFORMACJI</button></a>
-                </article>
-                <article>
-                    <header>Własna firma - 20.04.2017</header>
-                    <p>Szkolenie zostanie przeprowadzone przez przedsiębiorce Kamila Mokickiego, który opowie o w wadach i zaletach prowadzenia własnej firmy. Ponadto zaprezentuje kilka wskazówek dla młodego biznesmena.  </p>
                     <a target="_blank" href="https://www.facebook.com/events/1861692164104017/"><button class="ui button">WIĘCEJ INFORMACJI</button></a>
-                </article>
-                <article>
-                    <header>Co zrobić, by nas słuchano - 04.04.2017</header>
-                    <p>Na to pytanie odpowie Bartosz Liberski - Autor książki „Wystąpienia publiczne. Przemawiaj skutecznie i bez stresu!”, który od ponad 8 lat specjalizuje się w szkoleniach: biznesowych z wystąpień publicznych oraz odwlekania. </p>
                     <a target="_blank" href="https://www.facebook.com/events/182291802262268/"><button class="ui button">WIĘCEJ INFORMACJI</button></a>
-                </article>
+                </div>
             </div>
         </section>
         <div class="main-cooperation">
             <p>Chcesz z nami współpracować?</p>
             <div class="cooperation_right">
-                <p>Poszukujemy osób, zainteresowanych działalnością w Fundacji OFES, które chciałyby poszerzyć swoje umiejetności oraz doświadczenie.</p>
+                <p>Poszukujemy osób, zainteresowanych działalnością w Fundacji OFES, <br>które chciałyby poszerzyć swoje umiejetności oraz doświadczenie.</p>
                 <a href="/cooperation"><button class="ui button">DOŁĄCZ DO NAS</button></a>
             </div>
         </div>
@@ -120,9 +139,10 @@
         </div>
     </footer>
     <!--END FOOTER-->
-
 </div>
 
+<script src="script/jquery.min.js"></script>
+<script src="script/jquery.bxslider.min.js"></script>
 <script src="script/script.js"></script>
 </body>
 </html>
